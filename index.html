@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Portfolio</title>
+	<link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <section id="#home">
+  <nav class="navbar navbar-expand-lg  justify-content-between fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Portfolio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <img src="images/menu (2).png" alt="Menu Icon" width="30" height="30">
+    </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="#welcome">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About Me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+         
+        </ul>
+        
+        <!-- Phone and Email buttons aligned to the right -->
+        
+      </div>
+    </div>
+  </nav>
+</section>
+  
+  
+  
+      
+	
+    <main>
+		
+		<section id="welcome">
+            <div class="welcome-container">
+              <div class="image-container">
+                <img src="images/logo.jpg" alt="Description of the image"  width="700px" height="400px">
+              </div>
+              <div class="text-container ">
+                <h2 class="display-2 wel">Welcome</h2>
+                <p>I'm Victoriya Shalini, a passionate and aspiring front-end developer based in Trichy, Tamilnadu.
+                  As a fresh face in the world of coding, I'm thrilled to start my journey in  crafting delightful and user-friendly Websites.</p>
+                  <button type="button" class="btn btn-outline-warning">Projects</button>
+              </div>
+            </div>
+          </section>
+<section id="about">
+    <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-9  mx-auto">
+            <!-- Adjust the number of columns based on your design needs -->
+            <div class="my-5">
+              <h2 class="text-center display-3 about">ABOUT ME</h2>
+<p class="about-content">I am Victoriya, aspiring front-end developer and a 2019 graduate with a  <strong>Bachelor of Computer Applications (BCA) degree</strong>. Currently residing in Trichy, Tamil Nadu.Having gained valuable experience since earning my BCA degree, my aspiration is to contribute to projects that not only meet technical excellence but also prioritize creating positive user experiences.After graduating in 2019, I began my career in the tech industry as a <strong>Data Entry Associate(2020-2022) in Bangalore </strong>. Over two enriching years, I meticulously managed data entry tasks, ensuring accuracy and efficiency in processing information. This role not only honed my attention to detail but also instilled in me the importance of maintaining high standards of data quality.Driven by the desire to bring my design ideas to life on the web, I am on a journey to become a proficient front-end developer. While my experience as a Data Entry Associate provided a solid foundation in organizational skills, it is my newfound passion for coding and design that fuels my aspirations in this dynamic field.</p>            </div>
+          </div>
+        </div>
+      </div>
+      
+</section>
+<section id="skills">
+  <div class=" container-fluid ski-container">
+    <div class="row">
+      <div class="col-lg-9  mx-auto">
+        <div class="my-5">
+          <h2 class="text-center display-2 skills">SKILLS</h2>
+    <p id="skill">Recognizing your interest in a more thorough understanding of my skills, I extend a sincere invitation to explore the intricate facets of my capabilities. Your curiosity is valued, and I am eager to provide a comprehensive glimpse into what sets me apart in the world of front-end development.</p>
+  
+  <div class="grid-item">
+    <!-- Content for Column 2 -->
+    <div class="skills-container">
+      <div class="skill" id="html">HTML</div>
+      <div class="skill" id="css">CSS/SASS</div>
+      <div class="skill" id="mongodb">BOOTSTRAP</div>
+      <div class="skill" id="javascript">JAVASCRIPT</div>
+      <div class="skill" id="react">REACT.JS</div>
+      <div class="skill" id="node">JQUERY</div>
+      <div class="skill" id="express">NODE.JS</div>
+      <div class="skill" id="git">GIT</div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="contact">
+  <div class="container-fluid contact-container">
+    <div class="row">
+      <div class="col-lg-9  mx-auto">
+        <!-- Adjust the number of columns based on your design needs -->
+        <div class="my-5">
+          <h2 class="text-center display-3 contact">CONTACT</h2>
+          <p class="contacts">I'm delighted that you're considering reaching out after perusing my portfolio. If my work has caught your eye, let's explore the potential of working together. I bring a unique blend of passion, expertise, and a proven track record in  Web development.</p>
+      </div>
+      <div class="contact-container">
+        <img class="icon" src="images/gmail.png" alt="Email Icon" onclick="sendEmail()">
+        <img class="icon" src="images/phone-call (2).png" alt="Phone Icon" onclick="callPhoneNumber()">
+        <img class="icon" src="images/linkedin (1).png" alt="LinkedIn Icon" onclick="openLinkedInProfile()">
+        <img class="icon" src="images/github.png" alt="GitHub Icon" onclick="openGitHubProfile()">
+       
+    </div>
+    
+    </div>
+  </div>
+  </section>
+  
+
+
+<main>
+  <!-- Your other content goes here -->
+</main>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const skills = document.querySelectorAll('.skill');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-in');
+        }
+      });
+    }, { threshold: 0.5 }); // Adjust the threshold as needed
+
+    skills.forEach(skill => {
+      observer.observe(skill);
+    });
+  });
+</script>
+<script src="icons.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+</body>
+</html>

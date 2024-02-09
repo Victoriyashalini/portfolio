@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navbar with Tailwind CSS</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    /* Add custom styles */
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+  </style>
+</head>
+<body class="bg-gray-200">
+  <nav class="bg-gray-800 fixed w-full z-10">
+    <div class="container mx-auto px-4 py-3">
+      <div class="flex items-center justify-between">
+        <!-- Brand/logo -->
+        <a class="text-white text-lg font-bold" href="#">Logo</a>
+        <!-- Navbar links -->
+        <div class="hidden lg:flex flex-grow items-center justify-end space-x-4">
+          <a class="text-gray-300 hover:text-white" href="#">Home</a>
+          <a class="text-gray-300 hover:text-white" href="#">About</a>
+          <div class="dropdown relative">
+            <a class="text-gray-300 hover:text-white" href="#">Services</a>
+            <!-- Dropdown menu -->
+            <div class="dropdown-menu absolute hidden bg-gray-800 text-white p-2 rounded-md">
+              <a class="block py-1 hover:bg-gray-700" href="#">Service 1</a>
+              <a class="block py-1 hover:bg-gray-700" href="#">Service 2</a>
+              <a class="block py-1 hover:bg-gray-700" href="#">Service 3</a>
+            </div>
+          </div>
+          <a class="text-gray-300 hover:text-white" href="#">Contact</a>
+        </div>
+        <!-- Hamburger menu for mobile -->
+        <div class="lg:hidden">
+          <button id="mobile-menu-btn" class="text-white focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile menu (hidden by default) -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-gray-700">
+      <a class="block py-2 px-4 text-sm text-white hover:bg-gray-600" href="#">Home</a>
+      <a class="block py-2 px-4 text-sm text-white hover:bg-gray-600" href="#">About</a>
+      <div class="dropdown relative">
+        <a class="block py-2 px-4 text-sm text-white hover:bg-gray-600" href="#">Services</a>
+        <!-- Dropdown menu -->
+        <div class="dropdown-menu absolute hidden bg-gray-800 text-white p-2 rounded-md">
+          <a class="block py-1 hover:bg-gray-700" href="#">Service 1</a>
+          <a class="block py-1 hover:bg-gray-700" href="#">Service 2</a>
+          <a class="block py-1 hover:bg-gray-700" href="#">Service 3</a>
+        </div>
+      </div>
+      <a class="block py-2 px-4 text-sm text-white hover:bg-gray-600" href="#">Contact</a>
+    </div>
+  </nav>
+
+  <script>
+    // Toggle mobile menu
+    document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
