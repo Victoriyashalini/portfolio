@@ -10,9 +10,9 @@ function callPhoneNumber() {
 }
 
 function openLinkedInProfile() {
-	window.open("https://www.linkedin.com/in/YourLinkedInProfile", "_blank");
+	window.open("https://www.linkedin.com/in/victoriyashalini/", "_blank");
 }
 
 function openGitHubProfile() {
-	window.open("https://github.com/YourGitHubProfile", "_blank");
+	window.open("https://github.com/Victoriyashalini/portfolio", "_blank");
 }
